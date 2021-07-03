@@ -1,0 +1,30 @@
+
+
+
+// 使用add方法添加元素若超出容量 报异常 java.lang.IllegalStateException: Queue full
+        //blockingDeque.add("1");
+        //blockingDeque.add("2");
+
+        // 使用remove方法移除元素时 元素不足 报异常 java.util.NoSuchElementException
+        //blockingDeque.remove();
+        //blockingDeque.remove();
+
+        // 使用offer添加元素时，添加成功返回true，添加失败返回false
+        //blockingDeque.offer("1");
+        //blockingDeque.offer("2");
+        //System.out.println(blockingDeque.offer("3"));
+
+        // 使用poll添加元素时，移除成功返回被移除的元素，移除失败返回null
+        //System.out.println(blockingDeque.poll());
+        //System.out.println(blockingDeque.poll());
+        //System.out.println(blockingDeque.poll());
+
+        System.out.println(blockingDeque.offer("1", 10, TimeUnit.SECONDS));
+        System.out.println(blockingDeque.offer("2"));
+
+        /**
+         * 方法说明 方法类型  抛出异常      特殊值      阻塞         超时
+         *         插入     add(e)      offer(e)   put(e)       offer(e,time,unit)
+         *         移除     remove()    poll()     take()       poll(time,unit)
+         *         检查    element()    peek()     不可用        不可用
+         */
